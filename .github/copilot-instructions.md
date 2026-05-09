@@ -12,11 +12,9 @@
 - テスト（全体）:
   - go test ./... -v
 - 単一テストを実行（パッケージ内）:
-  - cd <pkg-dir> && go test -run '^TestName$' -v
+  - cd <pkg-dir> && go test -run '^TestName$' -v -race
 - テスト名で絞ってパッケージ横断実行:
   - go test ./... -run 'TestName' -v
-- リント: リポジトリにリント設定はありません。追加された場合の例：
-  - golangci-lint run ./...
 
 ## 高水準アーキテクチャ（現状）
 - モジュール名: "anbee-go"（go.mod）、Goバージョン: go.modを参照。
